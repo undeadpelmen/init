@@ -3,7 +3,7 @@ sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ $(lsb_release -cs) main'
 sudo apt update
 
-sudo apt install curl git zsh snapd wine zip golang-1.24 vim
+sudo apt install curl git zsh snapd wine zip golang-1.24 vim cowsay fortune neowofetch
 
 sudo systemctl enable snapd
 sudo systemctl start snapd
