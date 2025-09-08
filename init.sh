@@ -3,7 +3,7 @@ sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ $(lsb_release -cs) main'
 sudo apt update
 
-sudo apt install curl git zsh snapd wine 
+sudo apt install curl git zsh snapd wine zip golang-1.24
 
 sudo systemctl enable snapd
 sudo systemctl start snapd
@@ -32,5 +32,11 @@ nvm install 22
 node -v # Should print "v22.19.0".
 
 npm -v # Should print "10.9.3".
+
+curl -s "https://get.sdkman.io" | bash
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+sdk install java 26.ea.14-open
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
