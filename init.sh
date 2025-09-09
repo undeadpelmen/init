@@ -1,3 +1,5 @@
+$INITSRC="./src"
+
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ $(lsb_release -cs) main'
@@ -35,14 +37,14 @@ sdk install java 26.ea.14-open
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cat ./.zshrc > ~/.zshrc
+cat $INITSRC/.zshrc > ~/.zshrc
 
-cat ./.p10k.zsh > ~/.p10k.zsh
+cat $INITSRC/.p10k.zsh > ~/.p10k.zsh
 
-cat ./.bashrc > ~/.bashrc
+cat $INITSRC/.bashrc > ~/.bashrc
 
-cat ./.vimrc > ~/.vimrc
+cat $INITSRC/.vimrc > ~/.vimrc
+
+cat $INITSRC/.hello.sh > ~/.hello.sh
 
 mv ./Pictures ~/Pictures -r
-
-cat ./hello.sh ~/hello.sh

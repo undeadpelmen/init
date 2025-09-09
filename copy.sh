@@ -1,11 +1,13 @@
-cat ./.zshrc > ~/.zshrc
+$INITSRC="./src"
 
-cat ./.p10k.zsh > ~/.p10k.zsh
+cat $INITSRC/.zshrc > ~/.zshrc
 
-cat ./.bashrc > ~/.bashrc
+cat $INITSRC/.p10k.zsh > ~/.p10k.zsh
 
-cat ./.vimrc > ~/.vimrc
+cat $INITSRC/.bashrc > ~/.bashrc
 
-mv ./Pictures ~/Pictures -r
+cat $INITSRC/.vimrc > ~/.vimrc
 
-cat ./hello.sh ~/hello.sh
+mv $INITSRC/Pictures ~/Pictures -r
+
+cat $INITSRC/hello.sh ~/hello.sh
