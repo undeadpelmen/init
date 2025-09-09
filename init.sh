@@ -11,7 +11,6 @@ sudo systemctl start snapd
 sudo snap install docker lm-studio code
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/zsh-autocomplete
 
@@ -34,6 +33,8 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 sdk install java 26.ea.14-open
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 cat ./.zshrc > ~/.zshrc
 
 cat ./.p10k.zsh > ~/.p10k.zsh
@@ -45,5 +46,3 @@ cat ./.vimrc > ~/.vimrc
 mv ./Pictures ~/Pictures -r
 
 cat ./hello.sh ~/hello.sh
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
